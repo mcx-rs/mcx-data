@@ -1,5 +1,5 @@
 *.svd.patched
-
+peripherals
 temp
 
 __pycache__
