@@ -1,165 +1,245 @@
-peripherals:
-  # common peripherals
-  lpadc:
-    - mcxn947::ADC0
-  coolflux_bsp32:
-    - mcxn947::BSP32_0
-  cache64_ctrl:
-    - mcxn947::CACHE64_CTRL0
-  cache64_polsel:
-    - mcxn947::CACHE64_POLSEL0
-  flexcan:
-    - mcxn947::CAN0
-  cdog:
-    - mcxn947::CDOG0
-  mcx_cmc:
-    - mcxn947::CMC0
-  lpcmp:
-    - mcxn947::CMP0
-  crc:
-    - mcxn947::CRC0
-  ctimer:
-    - mcxn947::CTIMER0
-  dac1:
-    - mcxn947::DAC0
-  dac14:
-    - mcxn947::DAC2
-  edma4:
-    - mcxn947::DMA0
-  edma4_tcd:
-    - mcxn947::EDMA_0_TCD
-  eim:
-    - mcxn947::EIM0
-  smartcard_emvsim:
-    - mcxn947::EMVSIM0
-  enc:
-    - mcxn947::ENC0
-  mcx_enet:
-    - mcxn947::ENET0
-  erm:
-    - mcxn947::ERM0
-  evtg:
-    - mcxn947::EVTG0
-  ewm:
-    - mcxn947::EWM0
-  flexio:
-    - mcxn947::FLEXIO0
-  flexspi:
-    - mcxn947::FLEXSPI0
-  lpc_freqme:
-    - mcxn947::FREQME0
-  gdet:
-    - mcxn947::GDET0
-  gpio:
-    - mcxn947::GPIO0
-  i3c:
-    - mcxn947::I3C0
-  inputmux:
-    - mcxn947::INPUTMUX0
-  intm:
-    - mcxn947::INTM0
-  itrc:
-    - mcxn947::ITRC0
-  lpflexcomm:
-    - mcxn947::LP_FLEXCOMM0
-  lpi2c:
-    - mcxn947::LPI2C0
-  lpspi:
-    - mcxn947::LPSPI0
-  lptmr:
-    - mcxn947::LPTMR0
-  lpuart:
-    - mcxn947::LPUART0
-  mailbox:
-    - mcxn947::MAILBOX
-  mrt:
-    - mcxn947::MRT0
-  opamp:
-    - mcxn947::OPAMP0
-  ostimer:
-    - mcxn947::OSTIMER0
-  pdm:
-    - mcxn947::PDM
-  pint:
-    - mcxn947::PINT0
-  plu:
-    - mcxn947::PLU0
-  port:
-    - mcxn947::PORT0
-  powerquad:
-    - mcxn947::POWERQUAD
-  puf_v3:
-    - mcxn947::PUF
-  puf_v3_ctrl:
-    - mcxn947::PUF_CTRL
-  pwm:
-    - mcxn947::PWM0
-  irtc:
-    - mcxn947::RTC0
-  sai:
-    - mcxn947::SAI0
-  scg_nx4x:
-    - mcxn947::SCG0
-  sctimer:
-    - mcxn947::SCT0
-  sema42:
-    - mcxn947::SEMA42_0
-  sinc:
-    - mcxn947::SINC0
-  lpc_smartdma:
-    - mcxn947::SMARTDMA0
-  mcx_spc:
-    - mcxn947::SPC0
-  syscon_nx4x:
-    - mcxn947::SYSCON0
-  tdet:
-    - mcxn947::TDET0
-  trdc1:
-    - mcxn947::TRDC
-  tsi_v6:
-    - mcxn947::TSI0
-  usdhc:
-    - mcxn947::USDHC0
-  utick:
-    - mcxn947::UTICK0
-  mcx_vbat:
-    - mcxn947::VBAT0
-  vref1:
-    - mcxn947::VREF0
-  wuu:
-    - mcxn947::WUU0
-  wwdt:
-    - mcxn947::WWDT0
+# common peripherals
+lpadc:
+  mcxn947:
+    - ADC0
+coolflux_bsp32:
+  mcxn947:
+    - BSP32_0
+cache64_ctrl:
+  mcxn947:
+    - CACHE64_CTRL0
+cache64_polsel:
+  mcxn947:
+    - CACHE64_POLSEL0
+flexcan:
+  mcxn947:
+    - CAN0
+cdog:
+  mcxn947:
+    - CDOG0
+mcx_cmc:
+  mcxn947:
+    - CMC0
+lpcmp:
+  mcxn947:
+    - CMP0
+crc:
+  mcxn947:
+    - CRC0
+ctimer:
+  mcxn947:
+    - CTIMER0
+dac1:
+  mcxn947:
+    - DAC0
+dac14:
+  mcxn947:
+    - DAC2
+edma4:
+  mcxn947:
+    - DMA0
+edma4_tcd:
+  mcxn947:
+    - EDMA_0_TCD
+eim:
+  mcxn947:
+    - EIM0
+smartcard_emvsim:
+  mcxn947:
+    - EMVSIM0
+enc:
+  mcxn947:
+    - ENC0
+mcx_enet:
+  mcxn947:
+    - ENET0
+erm:
+  mcxn947:
+    - ERM0
+evtg:
+  mcxn947:
+    - EVTG0
+ewm:
+  mcxn947:
+    - EWM0
+flexio:
+  mcxn947:
+    - FLEXIO0
+flexspi:
+  mcxn947:
+    - FLEXSPI0
+lpc_freqme:
+  mcxn947:
+    - FREQME0
+gdet:
+  mcxn947:
+    - GDET0
+gpio:
+  mcxn947:
+    - GPIO0
+i3c:
+  mcxn947:
+    - I3C0
+inputmux:
+  mcxn947:
+    - INPUTMUX0
+intm:
+  mcxn947:
+    - INTM0
+itrc:
+  mcxn947:
+    - ITRC0
+lpflexcomm:
+  mcxn947:
+    - LP_FLEXCOMM0
+lpi2c:
+  mcxn947:
+    - LPI2C0
+lpspi:
+  mcxn947:
+    - LPSPI0
+lptmr:
+  mcxn947:
+    - LPTMR0
+lpuart:
+  mcxn947:
+    - LPUART0
+mailbox:
+  mcxn947:
+    - MAILBOX
+mrt:
+  mcxn947:
+    - MRT0
+opamp:
+  mcxn947:
+    - OPAMP0
+ostimer:
+  mcxn947:
+    - OSTIMER0
+pdm:
+  mcxn947:
+    - PDM
+pint:
+  mcxn947:
+    - PINT0
+plu:
+  mcxn947:
+    - PLU0
+port:
+  mcxn947:
+    - PORT0
+powerquad:
+  mcxn947:
+    - POWERQUAD
+puf_v3:
+  mcxn947:
+    - PUF
+puf_v3_ctrl:
+  mcxn947:
+    - PUF_CTRL
+pwm:
+  mcxn947:
+    - PWM0
+irtc:
+  mcxn947:
+    - RTC0
+sai:
+  mcxn947:
+    - SAI0
+scg_nx4x:
+  mcxn947:
+    - SCG0
+sctimer:
+  mcxn947:
+    - SCT0
+sema42:
+  mcxn947:
+    - SEMA42_0
+sinc:
+  mcxn947:
+    - SINC0
+lpc_smartdma:
+  mcxn947:
+    - SMARTDMA0
+mcx_spc:
+  mcxn947:
+    - SPC0
+syscon_nx4x:
+  mcxn947:
+    - SYSCON0
+tdet:
+  mcxn947:
+    - TDET0
+trdc1:
+  mcxn947:
+    - TRDC
+tsi_v6:
+  mcxn947:
+    - TSI0
+usdhc:
+  mcxn947:
+    - USDHC0
+utick:
+  mcxn947:
+    - UTICK0
+mcx_vbat:
+  mcxn947:
+    - VBAT0
+vref1:
+  mcxn947:
+    - VREF0
+wuu:
+  mcxn947:
+    - WUU0
+wwdt:
+  mcxn947:
+    - WWDT0
 
-  fmu_nx4x:
-    - mcxn947::FMU0
-  els_nx4x:
-    - mcxn947::ELS
-  rtc_subsystem_nx4x:
-    - mcxn947::RTC_SUBSYSTEM0
-  cmx_perfmon_nx4x:
-    - mcxn947::CMX_PERFMON0
-  sm3_nx4x:
-    - mcxn947::SM3_0
-  usbdcd_nx4x:
-    - mcxn947::USBDCD0
-  dm_nx4x:
-    - mcxn947::DM0
-  pkc_nx4x:
-    - mcxn947::PKC0
-  usbhs1_usbnc_nx4x:
-    - mcxn947::USBHS1__USBNC
-  usbhs1_usbc_nx4x:
-    - mcxn947::USBHS1__USBC
-  usbhs1_phy_dcd_nx4x:
-    - mcxn947::USBHS1_PHY_DCD
-  usbphy_nx4x:
-    - mcxn947::USBPHY
-  usbfs_nx4x:
-    - mcxn947::USBFS0
-  npx_nx4x:
-    - mcxn947::NPX0
-  trng_nx4x:
-    - mcxn947::TRNG0
-  otpc_nx4x:
-    - mcxn947::OTPC0
+fmu_nx4x:
+  mcxn947:
+    - FMU0
+els_nx4x:
+  mcxn947:
+    - ELS
+rtc_subsystem_nx4x:
+  mcxn947:
+    - RTC_SUBSYSTEM0
+cmx_perfmon_nx4x:
+  mcxn947:
+    - CMX_PERFMON0
+sm3_nx4x:
+  mcxn947:
+    - SM3_0
+usbdcd_nx4x:
+  mcxn947:
+    - USBDCD0
+dm_nx4x:
+  mcxn947:
+    - DM0
+pkc_nx4x:
+  mcxn947:
+    - PKC0
+usbhs1_usbnc_nx4x:
+  mcxn947:
+    - USBHS1__USBNC
+usbhs1_usbc_nx4x:
+  mcxn947:
+    - USBHS1__USBC
+usbhs1_phy_dcd_nx4x:
+  mcxn947:
+    - USBHS1_PHY_DCD
+usbphy_nx4x:
+  mcxn947:
+    - USBPHY
+usbfs_nx4x:
+  mcxn947:
+    - USBFS0
+npx_nx4x:
+  mcxn947:
+    - NPX0
+trng_nx4x:
+  mcxn947:
+    - TRNG0
+otpc_nx4x:
+  mcxn947:
+    - OTPC0

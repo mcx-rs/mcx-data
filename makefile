@@ -12,12 +12,12 @@ PATCH_FILES := $(foreach device, $(DEVICES), svds/$(device).yaml)
 PATCHED_SVDS := $(foreach device, $(DEVICES), svds/$(device).svd.patched)
 DEVICE_PERIPHERALS_DIRS := $(foreach device, $(DEVICES), temp/$(device))
 
-.PHONY: install-tools patch extract-peripherals transform clean clean-patch clean-extracted-peripherals
+.PHONY: install-tools patch extract-peripherals transform clean clean-patch clean-extracted-peripherals clean-peripherals
 
 install-tools:
 	@echo "Install tools"
 	@cargo install svdtools@0.3.14
-	@cargo install --git https://github.com/embassy-rs/chiptool --rev $(CHIPTOOL_REV)
+	@cargo install --path ../chiptool
 
 patch: $(PATCHED_SVDS)
 svds/%.svd.patched: svds/%.yaml svds/%.svd
@@ -34,10 +34,12 @@ transform: extract-peripherals
 	@rm -rf peripherals
 	@python3 -c "from scripts.peripherals import copy_and_rename_peripherals, apply_transform; copy_and_rename_peripherals(); apply_transform()"
 
-clean: clean-patch clean-extracted-peripherals
+clean: clean-patch clean-extracted-peripherals clean-peripherals
 clean-patch:
 	@echo "Clean patched svds"
 	@rm -f $(PATCHED_SVDS)
 clean-extracted-peripherals:
 	@echo "Clean extracted peripherals"
-	@rm -rf $(DEVICE_PERIPHERALS_DIRS)
+	@rm -rf temp
+clean-peripherals:
+	@rm -rf peripherals
