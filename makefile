@@ -1,6 +1,6 @@
 DEVICES := mcxn947
 
-CHIPTOOL_REV := 305bd6ee3e57009ae93be2c81d6e94b9896a03b1
+CHIPTOOL_REV := 4eb4feb74bd469a1c8244364b9adc3b7f3e9404d
 
 CHIPTOOL := chiptool
 SVDTOOLS := svdtools
@@ -17,7 +17,7 @@ DEVICE_PERIPHERALS_DIRS := $(foreach device, $(DEVICES), temp/$(device))
 install-tools:
 	@echo "Install tools"
 	@cargo install svdtools@0.3.14
-	@cargo install --path ../chiptool
+	@cargo install --git https://github.com/mcx-rs/chiptool --rev $(CHIPTOOL_REV)
 
 patch: $(PATCHED_SVDS)
 svds/%.svd.patched: svds/%.yaml svds/%.svd
