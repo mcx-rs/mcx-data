@@ -6,6 +6,12 @@ _include:
 _delete:
   - FMU0TEST
 
+_modify:
+  EDMA_0_TCD:
+    name: EDMA_TCD0
+  EDMA_1_TCD:
+    name: EDMA_TCD1
+
 PORT0:
   _modify:
     PCR0:
@@ -39,7 +45,7 @@ PORT0:
     - "PCR2*"
     - "PCR3*"
 
-EDMA_0_TCD:
+EDMA_TCD0:
   _cluster:
     CH%s:
       "CH?_CSR,CH??_CSR":
@@ -256,4 +262,4 @@ _derive:
   PORT3: PORT0
   PORT4: PORT0
   PORT5: PORT0
-  EDMA_1_TCD: EDMA_0_TCD
+  EDMA_TCD1: EDMA_TCD0
