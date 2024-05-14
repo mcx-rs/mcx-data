@@ -1,326 +1,407 @@
 # common peripherals
 lpadc:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - ADC0
 coolflux_bsp32:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - BSP32_0
 cache64_ctrl:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - CACHE64_CTRL0
 cache64_polsel:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - CACHE64_POLSEL0
 flexcan:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - CAN0
 cdog:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - CDOG0
 mcx_cmc:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - CMC0
 lpcmp:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - CMP0
 crc:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - CRC0
 ctimer:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - CTIMER0
 dac1:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - DAC0
 dac14:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - DAC2
 edma4:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - DMA0
 edma4_tcd:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - EDMA_TCD0
 eim:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - EIM0
 smartcard_emvsim:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - EMVSIM0
 enc:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - ENC0
 mcx_enet:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - ENET0
 erm:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - ERM0
 evtg:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - EVTG0
 ewm:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - EWM0
 flexio:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - FLEXIO0
 flexspi:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - FLEXSPI0
 lpc_freqme:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - FREQME0
 gdet:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - GDET0
 gpio:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - GPIO0
 i3c:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - I3C0
 inputmux:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - INPUTMUX0
 intm:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - INTM0
 itrc:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - ITRC0
 lpflexcomm:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - LP_FLEXCOMM0
 lpi2c:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - LPI2C0
 lpspi:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - LPSPI0
 lptmr:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - LPTMR0
 lpuart:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - LPUART0
 mailbox:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - MAILBOX
 mrt:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - MRT0
 opamp:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - OPAMP0
 ostimer:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - OSTIMER0
 pdm:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - PDM
 pint:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - PINT0
 plu:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - PLU0
 port:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - PORT0
 powerquad:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - POWERQUAD
 puf_v3:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - PUF
 puf_v3_ctrl:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - PUF_CTRL
 pwm:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - PWM0
 irtc:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - RTC0
 sai:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - SAI0
 scg_nx4x:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - SCG0
 sctimer:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - SCT0
 sema42:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - SEMA42_0
 sinc:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - SINC0
 lpc_smartdma:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - SMARTDMA0
 mcx_spc:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - SPC0
 syscon_nx4x:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - SYSCON0
 tdet:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - TDET0
 trdc1:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - TRDC
 tsi_v6:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - TSI0
 usdhc:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - USDHC0
 utick:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - UTICK0
 mcx_vbat:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - VBAT0
 vref1:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - VREF0
 wuu:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - WUU0
 wwdt:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - WWDT0
 
 fmu_nx4x:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - FMU0
 els_nx4x:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - ELS
 rtc_subsystem_nx4x:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - RTC_SUBSYSTEM0
 cmx_perfmon_nx4x:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - CMX_PERFMON0
 sm3_nx4x:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - SM3_0
 usbdcd_nx4x:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - USBDCD0
 dm_nx4x:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - DM0
 pkc_nx4x:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - PKC0
 usbhs1_usbnc_nx4x:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - USBHS1__USBNC
 usbhs1_usbc_nx4x:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - USBHS1__USBC
 usbhs1_phy_dcd_nx4x:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - USBHS1_PHY_DCD
 usbphy_nx4x:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - USBPHY
 usbfs_nx4x:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - USBFS0
 npx_nx4x:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - NPX0
 trng_nx4x:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - TRNG0
 otpc_nx4x:
   from: mcxn947
-  mcxn[5|9]47:
+  mapping:
+    mcxn[5|9]47:
     - OTPC0
