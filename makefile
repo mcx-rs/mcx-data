@@ -1,4 +1,4 @@
-DEVICES := mcxn947
+DEVICES := mcxn947 mcxn547
 
 CHIPTOOL_REV := 4eb4feb74bd469a1c8244364b9adc3b7f3e9404d
 

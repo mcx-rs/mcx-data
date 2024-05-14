@@ -1,4 +1,5 @@
 import os
+import re
 import shutil
 import subprocess
 from glob import glob
@@ -13,21 +14,31 @@ with open("peripherals.yaml", "r") as f:
 
 def get_device_mapped_peripherals(device: str) -> List:
     mapped_peripherals = []
-    for p in _peripherals:
-        if device in _peripherals[p]:
-            # l = peripherals[p][device]
-            mapped_peripherals.extend([(p, x) for x in _peripherals[p][device]])
+    for pname, mapping in _peripherals.items():
+        for r, opnames in mapping.items():
+            if r == "from":
+                continue
+            match = re.findall(f"^{r}$", device)
+            if len(match) != 1:
+                continue
+            l = [(pname, x) for x in opnames]
+            mapped_peripherals.extend(l)
+
     return mapped_peripherals
 
 
 def copy_and_rename_peripherals():
     os.makedirs("temp/peripherals", exist_ok=True)
-    for p in _peripherals:
-        device = list(_peripherals[p].keys())
-        device.sort()
-        device = device[0]
-        name = _peripherals[p][device][0]
-        shutil.copy(f"temp/{device}/{name}.yaml", f"temp/peripherals/{p}.yaml")
+    for pname, mapping in _peripherals.items():
+        device = mapping["from"]
+        for r, opnames in mapping.items():
+            if r == "from":
+                continue
+            if len(re.findall(f"^{r}$", device)) != 1:
+                continue
+            op = opnames[0]
+            break
+        shutil.copy(f"temp/{device}/{op}.yaml", f"temp/peripherals/{pname}.yaml")
 
 
 def apply_transform(missing_ok: bool = True):
