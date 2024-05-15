@@ -1,0 +1,21 @@
+transforms:
+- !MergeEnums
+  from: REG(?:\d+)_POLICY
+  to: REG_POLICY
+  check: Layout
+- !RenameEnumVariants
+  enum: REG_POLICY
+  from: REG(?:\d+)_00
+  to: NonCacheable
+- !RenameEnumVariants
+  enum: REG_POLICY
+  from: REG(?:\d+)_01
+  to: WriteThrough
+- !RenameEnumVariants
+  enum: REG_POLICY
+  from: REG(?:\d+)_10
+  to: WriteBack
+- !RenameEnumVariants
+  enum: REG_POLICY
+  from: REG(?:\d+)_11
+  to: Invalid

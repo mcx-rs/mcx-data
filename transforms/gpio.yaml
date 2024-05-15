@@ -1,0 +1,92 @@
+transforms:
+  - !Rename
+    from: GPIO(\d+)
+    to: GPIO
+
+  - !MergeEnums
+    from: GIWE(\d*)
+    to: GIWE
+  - !MakeFieldArray
+    fieldsets: (GICHR|GICLR)
+    from: GIWE(\d*)
+    to: GIWE
+  
+  - !MergeEnums
+    from: ISF(\d*)
+    to: ISF
+  - !MakeFieldArray
+    fieldsets: ISFR
+    from: ISF(\d*)
+    to: ISF
+
+  - !MergeEnums
+    from: (ICNP_|PCNP_)?NPE(\d*)
+    to: NPE
+  - !MakeFieldArray
+    fieldsets: PCNP
+    from: NPE(\d*)
+    to: NPE
+
+  - !MergeEnums
+    from: (ICNS_|PCNS_)?NSE(\d*)
+    to: NSE
+  - !MakeFieldArray
+    fieldsets: PCNS
+    from: NSE(\d*)
+    to: NSE
+
+  - !MergeEnums
+    from: PTCO(\d*)
+    to: PTCO
+  - !MakeFieldArray
+    fieldsets: PCOR
+    from: PTCO(\d*)
+    to: PTCO
+
+  - !MergeEnums
+    from: PDD(\d*)
+    to: PDD
+  - !MakeFieldArray
+    fieldsets: PDDR
+    from: PDD(\d*)
+    to: PDD
+
+  - !MergeEnums
+    from: PDI(\d*)
+    to: PDI
+  - !MakeFieldArray
+    fieldsets: PDIR
+    from: PDI(\d*)
+    to: PDI
+
+  - !MergeEnums
+    from: PDO(\d*)
+    to: PDO
+  - !MakeFieldArray
+    fieldsets: PDOR
+    from: PDO(\d*)
+    to: PDO
+
+  - !MergeEnums
+    from: PID(\d*)
+    to: PID
+  - !MakeFieldArray
+    fieldsets: PIDR
+    from: PID(\d*)
+    to: PID
+
+  - !MergeEnums
+    from: PTSO(\d*)
+    to: PTSO
+  - !MakeFieldArray
+    fieldsets: PSOR
+    from: PTSO(\d*)
+    to: PTSO
+
+  - !MergeEnums
+    from: PTTO(\d*)
+    to: PTTO
+  - !MakeFieldArray
+    fieldsets: PTOR
+    from: PTTO(\d*)
+    to: PTTO

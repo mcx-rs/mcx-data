@@ -1,0 +1,8 @@
+transforms:
+- !DeleteEnums
+  from: (?:.*)_FLAG
+- !MergeEnums
+  from: (?:ADDRESS|MISCOMPARE|SEQUENCE|STATE|TIMEOUT)_CTRL
+  to: CTRL
+  check: Layout
+  skip_unmergeable: true

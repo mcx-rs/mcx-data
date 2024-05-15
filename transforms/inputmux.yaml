@@ -1,0 +1,21 @@
+transforms:
+- !DeleteEnums
+  from: (.*)_(INP|TRIGIN)
+- !DeleteEnums
+  from: REQ(\d+)_EN0
+
+- !MergeFieldsets
+  from: ADC(\d)_TRIG
+  to: ADC_TRIG
+- !MergeFieldsets
+  from: CMP(\d)_TRIG
+  to: CMP_TRIG
+- !MergeFieldsets
+  from: CTIMER(\d*)CAP(\d+)
+  to: CTIMER_CAP
+
+- !MakeFieldArray
+  fieldsets: DMA_REQ_ENABLE(\d+)(.*)
+  from: REQ(\d*)_EN0
+  to: REQ_EN
+  allow_cursed: true

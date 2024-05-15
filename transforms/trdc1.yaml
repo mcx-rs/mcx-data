@@ -1,0 +1,64 @@
+transforms:
+- !DeleteEnums
+  from: AI
+
+- !MergeEnums
+  from: MBC(\d)_DOM(\d)_MEM(\d)_BLK_CFG_W(\d)_MBACSEL(\d)
+  to: MBC_DOM_MEM_BLK_CFG_W_MBACSEL
+- !MergeEnums
+  from: MBC(\d)_DOM(\d)_MEM(\d)_BLK_CFG_W(\d)_NSE(\d)
+  to: MBC_DOM_MEM_BLK_CFG_W_NSE
+- !MergeEnums
+  from: MBC(\d)_DOM(\d)_MEM(\d)_BLK_NSE_W(\d)_BIT(\d+)
+  to: MBC_DOM_MEM_BLK_CFG_W_BIT
+- !MergeEnums
+  from: MBC(\d)_MEMN_GLBAC(\d)_LK
+  to: MBC_MEMN_GLBAC_LK
+- !MergeEnums
+  from: MBC(\d)_MEMN_GLBAC(\d)_PR
+  to: MBC_MEMN_GLBAC_NPR
+- !MergeEnums
+  from: MBC(\d)_MEMN_GLBAC(\d)_NPW
+  to: MBC_MEMN_GLBAC_NPW
+- !MergeEnums
+  from: MBC(\d)_MEMN_GLBAC(\d)_NUR
+  to: MBC_MEMN_GLBAC_NUR
+- !MergeEnums
+  from: MBC(\d)_MEMN_GLBAC(\d)_NUW
+  to: MBC_MEMN_GLBAC_NUW
+- !MergeEnums
+  from: MBC(\d)_MEMN_GLBAC(\d)_NPR
+  to: MBC_MEMN_GLBAC_NPR
+- !MergeEnums
+  from: MBC(\d)_MEMN_GLBAC(\d)_NPX
+  to: MBC_MEMN_GLBAC_NPX
+- !MergeEnums
+  from: MBC(\d)_MEMN_GLBAC(\d)_NUX
+  to: MBC_MEMN_GLBAC_NUX
+- !MergeEnums
+  from: MBC(\d)_MEMN_GLBAC(\d)_SPR
+  to: MBC_MEMN_GLBAC_SPR
+- !MergeEnums
+  from: MBC(\d)_MEMN_GLBAC(\d)_SPW
+  to: MBC_MEMN_GLBAC_SPW
+- !MergeEnums
+  from: MBC(\d)_MEMN_GLBAC(\d)_SPX
+  to: MBC_MEMN_GLBAC_SPX
+- !MergeEnums
+  from: MBC(\d)_MEMN_GLBAC(\d)_SUR
+  to: MBC_MEMN_GLBAC_SUR
+- !MergeEnums
+  from: MBC(\d)_MEMN_GLBAC(\d)_SUW
+  to: MBC_MEMN_GLBAC_SUW
+- !MergeEnums
+  from: MBC(\d)_MEMN_GLBAC(\d)_SUX
+  to: MBC_MEMN_GLBAC_SUX
+
+- !MergeFieldsets
+  from: MBC(\d)_DOM(\d)_MEM(\d)_BLK_CFG_W(\d)
+  to: MBC_DOM_MEM_BLK_CFG_W
+
+- !MakeFieldArray
+  fieldsets: MBC(\d)_DOM(\d)_MEM(\d)_BLK_NSE_W(\d)
+  from: BIT(\d+)
+  to: BIT

@@ -1,0 +1,37 @@
+transforms:
+  - !Rename
+    from: PORT(\d+)
+    to: PORT
+
+  - !MergeEnums
+    from: EDF(\d+)
+    to: EDF
+  - !MergeEnums
+    from: EDIE(\d+)
+    to: EDIE
+  - !MergeEnums
+    from: GPWE(\d+)
+    to: GPWE
+  - !MergeEnums
+    from: PCR(\d+)_(.+)
+    to: PCR_$2
+  - !MergeFieldsets
+    from: PCR(\d+)
+    to: PCR
+    check: NoCheck
+  - !MakeFieldArray
+    fieldsets: EDFR
+    from: EDF(\d+)
+    to: EDF
+  - !MakeFieldArray
+    fieldsets: EDIER
+    from: EDIE(\d+)
+    to: EDIE
+  - !MakeFieldArray
+    fieldsets: GPCHR
+    from: GPWE(\d+)
+    to: GPWE
+  - !MakeFieldArray
+    fieldsets: GPCLR
+    from: GPWE(\d+)
+    to: GPWE

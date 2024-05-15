@@ -1,0 +1,51 @@
+transforms:
+- !DeleteEnums
+  from: ^(ADC|CMP|COOLFLUX|COOLFLUX_APB|CRC|DAC|EIM|ELS|ENC|ENET|ERM|EVSIM|EVTG|EWM|FC|FLEXCAN|FLEXIO|FMC|FMU|FLEXSPI|FREQME|GDET|GPIO|I3C|INTM|MAILBOX|MICFIL|MRT|MUX|NMI|NPU|OPAMP|OSTIMER|PINT|PKC|PKC_RAM|PLU_LUT|PORT|PQ|PUF|PWM|ROM|RTC|SAI|SB3|SCG|SCT|SEMA42|SINC|SM3|SmartDMA|TIMER|TRNG|TRO|TSI|USB0_FS|USB0_FS_DCD|USB_HS|USB_HS_PHY|UTICK|VREF|WWDT|uSDHC)(\d*)$
+- !DeleteEnums
+  from: ^(AHBCLKCTRL|AUTOCLKGATEOVERRIDE)(.*)$
+- !DeleteEnums
+  from: ^(.*)(RST|HALT|RESET|UNSTAB|CLK_EN|CLKEN|DBGEN|DBGDEN|ENA|EN_SET|ENABLE|EN|REQ|NOREF|SKEW|LOCKUP|SLEEPING|_CLR)$
+- !DeleteEnums
+  from: ^FLAG_(.*)$
+- !DeleteEnums
+  from: INT(\d+)
+- !DeleteEnums
+  from: DIS_(.*)
+- !DeleteEnums
+  from: CLR_(.*)
+- !DeleteEnums
+  from: PRI_(.*)
+- !DeleteEnums
+  from: IRQ
+- !DeleteEnums
+  from: UNLOCK
+- !DeleteEnums
+  from: RAM(.*)
+- !DeleteEnums
+  from: ROM_WAIT
+- !DeleteEnums
+  from: AHBMATPRIO_(.*)
+- !DeleteEnums
+  from: CLKIN_ENA_FM_USBH_LPT
+
+- !MergeEnums
+  from: DEBUG_FEATURES_(.*)
+  to: DEBUG_FEATURES_EN
+- !MergeEnums
+  from: SWD_ACCESS_(.*)
+  to: SWD_ACCESS_CODE
+- !MergeEnums
+  from: ADC\dCLKSEL_SEL
+  to: ADC_CLKSEL
+- !MergeEnums
+  from: I3C\dFCLKSEL_SEL
+  to: I3CFCLKSEL
+- !MergeEnums
+  from: I3C\dFCLKSSEL_SEL
+  to: I3CFCLKSSEL
+- !MergeEnums
+  from: I3C0FCLKSTCSEL_SEL
+  to: I3CFCLKSTCSEL
+- !MergeEnums
+  from: DAC0CLKSEL_SEL
+  to: DACCLKSEL
